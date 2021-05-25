@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --primary-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --primary-very-light-gray: hsl(0, 0%, 95%);
+  --font-lexend: "Lexend Deca";
+  --font-big-shoulders: "Big Shoulders Display";
+}
+
+p {
+  font-family: var(--font-lexend);
+  font-size: 0.6rem;
+  color: var(--primary-transparent-white);
+  line-height: 1.2rem;
+}
+
+h1 {
+  font-family: var(--font-big-shoulders);
+  color: var(--primary-very-light-gray);
+}
+
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  height: 350px;
+  width: 650px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.orange {
+  background: var(--primary-orange);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.orange .button {
+  color: var(--primary-orange);
+}
+
+.dark-cyan .button {
+  color: var(--primary-dark-cyan);
+}
+
+.very-dark-cyan .button {
+  color: var(--primary-very-dark-cyan);
+}
+
+.dark-cyan {
+  background: var(--primary-dark-cyan);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.very-dark-cyan {
+  background: var(--primary-very-dark-cyan);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 0px 5px 5px 0px;
+}
+
+footer {
+  flex-direction: column;
+}
+
+.button {
+  border: 1.5px solid;
+  border-color: var(--primary-very-light-gray);
+  border-radius: 50px;
+  background: var(--primary-very-light-gray);
+  font-family: var(--font-lexend);
+  margin-top: auto;
+  height: 25px;
+  width: 75px;
+  font-size: 0.5rem;
+}
+
+.button:active {
+  background: transparent;
+  color: var(--primary-very-light-gray);
+}
+
+.img {
+  max-height: 50px;
+  max-width: 50px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 80%;
+  }
+
+  .orange {
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .dark-cyan {
+  }
+
+  .very-dark-cyan {
+    border-radius: 0px 0px 5px 5px;
+  }
+}
