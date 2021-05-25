@@ -112,6 +112,8 @@ footer {
     flex-direction: column;
     max-width: 200px;
     max-height: 80%;
+    margin-top: 20rem;
+    justify-content: center;
   }
 
   .orange {
